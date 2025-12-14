@@ -18,7 +18,7 @@ export class SimpleFormComponent {
       .subscribe({
         next: (response) => {
           console.log(response);
-          this.responseMessage = response.msg!;
+          this.responseMessage = response.msg ?? '';
         },
         error: (error) => {
           console.log(error)

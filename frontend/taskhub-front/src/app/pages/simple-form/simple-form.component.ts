@@ -17,9 +17,11 @@ export class SimpleFormComponent {
     this.messageService.sendMessage(this.text)
       .subscribe({
         next: (response) => {
+          console.log(response);
           this.responseMessage = response;
         },
-        error: () => {
+        error: (error) => {
+          console.log(error)
           this.responseMessage = 'Erro ao enviar mensagem';
         }
       });

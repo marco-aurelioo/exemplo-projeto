@@ -12,7 +12,7 @@ export class MsgServiceService {
 
   constructor(private http: HttpClient) {}
 
-  sendMessage(text: string): Observable<any> {
+  sendMessage(text: string): Observable<string> {
     return this.http.get<any>(this.apiUrl+text);
   }
 

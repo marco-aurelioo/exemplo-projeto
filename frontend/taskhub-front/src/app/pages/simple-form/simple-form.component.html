@@ -1,0 +1,17 @@
+<h2>Enviar mensagem</h2>
+
+<form (ngSubmit)="submit()">
+  <input
+    type="text"
+    [(ngModel)]="text"
+    name="text"
+    placeholder="Digite um texto"
+    required
+  />
+
+  <button type="submit">Enviar</button>
+</form>
+
+<p *ngIf="responseMessage">
+  Resposta do backend: {{ responseMessage }}
+</p>
